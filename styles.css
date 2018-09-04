@@ -19,3 +19,7 @@ div {
   margin-top: 10rem;
   color: #FFC5BF;
 }
+
+.current-character {
+  color: black;
+}
