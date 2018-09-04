@@ -1,11 +1,21 @@
+* {
+  margin: 0 auto;
+}
+
 body {
-  background-color: gray;
-  color: white;
+  background-color: #A0372C;
   font-family: 'Arimo';
   text-align: center;
   margin-top: 5rem;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 35px;
+  color: #FFC5BF
+}
+
+div {
+  font-size: 48px;
+  margin-top: 10rem;
+  color: #FFC5BF;
 }

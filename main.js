@@ -2,10 +2,10 @@ var characters = 'grumpy wizards make toxic brew for the evil queen and jack'
 
 var wordArray = []
 for (var i = 0; i < characters.length; i++) {
-  var object = {
+  var words = {
     letter: characters[i]
   }
-  wordArray.push(object)
+  wordArray.push(words)
 }
 
 console.log(wordArray)
@@ -19,8 +19,8 @@ function renderOneCharacter(character) {
   function renderAllCharacters(characters) {
     var $allLetters = document.createElement('div')
     for (var i = 0; i < characters.length; i++) {
-      var character = characters[i]
-      $allLetters.appendChild(renderOneCharacter(character))
+      var $character = characters[i]
+      $allLetters.appendChild(renderOneCharacter($character))
     }
     document.body.appendChild($allLetters)
   }
