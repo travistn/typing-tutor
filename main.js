@@ -1,6 +1,7 @@
 var applicationState = {
   wordArray: [],
-  currentCharacter: 0
+  currentCharacter: 0,
+  failures: 0
 }
 
 var characters = 'grumpy wizards make toxic brew for the evil queen and jack'
