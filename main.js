@@ -24,3 +24,9 @@ function renderOneCharacter(character) {
   }
 
 renderAllCharacters(wordArray)
+
+for (var i = 0; i < characters.length; i++) {
+  var isTyped = {
+    letter: characters[i],
+  }
+}
