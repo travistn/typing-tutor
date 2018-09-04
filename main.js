@@ -8,8 +8,6 @@ for (var i = 0; i < characters.length; i++) {
   wordArray.push(words)
 }
 
-console.log(wordArray)
-
 function renderOneCharacter(character) {
   var $oneLetter = document.createElement('span')
   $oneLetter.textContent = character.letter
@@ -19,8 +17,8 @@ function renderOneCharacter(character) {
   function renderAllCharacters(characters) {
     var $allLetters = document.createElement('div')
     for (var i = 0; i < characters.length; i++) {
-      var $character = characters[i]
-      $allLetters.appendChild(renderOneCharacter($character))
+      var character = characters[i]
+      $allLetters.appendChild(renderOneCharacter(character))
     }
     document.body.appendChild($allLetters)
   }
