@@ -1,11 +1,9 @@
-var characters = 'abcdefghijklmnopqrstuvwxyz'
-var text = [
-  {
-    word: characters[i]
-  }
-]
+var characters = 'grumpywizardsmaketoxicbrewfortheevilqueenandjack'
 
-function renderOneChar (word) {
-  var $word = document.createElement('div')
-  $word.textContent = text.word[i]
+var wordArray = []
+for (var i = 0; i < characters.length; i++) {
+  wordArray[i] = {
+    letter: characters[i]
+  }
 }
+console.log(wordArray)
