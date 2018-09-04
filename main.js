@@ -16,4 +16,13 @@ function renderOneCharacter(character) {
   return $oneLetter
   }
 
-renderOneCharacter(wordArray)
+  function renderAllCharacters(characters) {
+    var $allLetters = document.createElement('div')
+    for (var i = 0; i < characters.length; i++) {
+      var character = characters[i]
+      $allLetters.appendChild(renderOneCharacter(character))
+    }
+    document.body.appendChild($allLetters)
+  }
+
+renderAllCharacters(wordArray)
