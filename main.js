@@ -20,6 +20,9 @@ function renderOneCharacter(character, index) {
   if (index === applicationState.currentCharacter) {
     $oneLetter.classList.add('current-character')
     }
+  else {
+    $oneLetter.classList.add('failed')
+  }
     return $oneLetter
   }
 

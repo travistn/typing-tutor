@@ -3,7 +3,8 @@
 }
 
 body {
-  background-color: #A0372C;
+  background-color: white;
+  color: black;
   font-family: 'Arimo';
   text-align: center;
   margin-top: 5rem;
@@ -11,15 +12,22 @@ body {
 
 h1 {
   font-size: 35px;
-  color: #FFC5BF
+  border: solid .5rem;
+  color: black;
+  padding: .5rem;
+  width: 20%;
 }
 
 div {
   font-size: 48px;
   margin-top: 10rem;
-  color: #FFC5BF;
+  color: black;
 }
 
 .current-character {
-  color: black;
+  color: #51EF05;
+}
+
+.failed {
+  color: red;
 }
