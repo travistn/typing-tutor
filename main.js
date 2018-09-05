@@ -34,6 +34,12 @@ function renderOneCharacter(character, index) {
 
 renderAllCharacters(applicationState.wordArray)
 
+var $body = document.querySelector('div')
+
 window.addEventListener('keydown', function(event) {
-  renderAllCharacters(event)
+  if (event.key !== applicationState.wordArray[applicationState.currentCharacter]) {
+    applicationState.failures += 1
+  }
+  $body.textContent = ''
+  $body.appendChild(renderAllCharacters(applicationState.wordArray))
 })
