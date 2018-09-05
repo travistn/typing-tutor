@@ -1,15 +1,14 @@
 var applicationState = {
   wordArray: [],
   currentCharacter: 0,
-  failures: 0
 }
 
 var characters = 'grumpy wizards make toxic brew for the evil queen and jack'
 
-
 for (var i = 0; i < characters.length; i++) {
   var words = {
-    letter: characters[i]
+    letter: characters[i],
+    failures: 0
   }
   applicationState.wordArray.push(words)
 }
@@ -20,7 +19,7 @@ function renderOneCharacter(character, index) {
   if (index === applicationState.currentCharacter) {
     $oneLetter.classList.add('current-character')
     }
-  else {
+  if (index !== applicationState.currentCharacter) {
     $oneLetter.classList.add('failed')
   }
     return $oneLetter
@@ -37,12 +36,14 @@ function renderOneCharacter(character, index) {
 
 renderAllCharacters(applicationState.wordArray)
 
-var $body = document.querySelector('div')
-
 window.addEventListener('keydown', function(event) {
-  if (event.key !== applicationState.wordArray[applicationState.currentCharacter]) {
-    applicationState.failures += 1
+  var currentChar = applicationState.wordArray[applicationState.currentCharacter]
+  if (event.key !== currentChar.letter ) {
+    words.failures += 1
   }
-  $body.textContent = ''
-  $body.appendChild(renderAllCharacters(applicationState.wordArray))
+  else {
+    applicationState.currentCharacter += 1
+  }
+  document.body.textContent = ''
+  document.body.appendChild(renderAllCharacters(applicationState.wordArray))
 })
