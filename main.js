@@ -33,3 +33,7 @@ function renderOneCharacter(character, index) {
   }
 
 renderAllCharacters(applicationState.wordArray)
+
+window.addEventListener('keydown', function(event) {
+  renderAllCharacters(event)
+})
